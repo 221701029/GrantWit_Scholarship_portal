@@ -1,0 +1,1365 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/artegra-sans');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Londrina+Shadow&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Artegra Sans SC', sans-serif;
+    color: white;
+    width: 100vw;
+    max-width: 2560px;
+    overflow-x: hidden;
+}
+/* Completely Transparent Navbar */
+/* Transparent Navbar */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    padding: 10px 3%;
+    background: transparent;
+}
+
+/* LOGO - Left Aligned */
+.logo {
+    flex: 0 0 auto;
+}
+
+.logo img {
+    height: 110px; /* Fixed size */
+}
+
+nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-53.8%); /* Use -50% instead of -60% for perfect centering */
+    display: flex;
+    justify-content: center;
+    width: max-content;
+}
+
+.nav-links {
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent white background */
+    width: fit-content; /* Adjust width based on content */
+    padding: 20px 40px; /* More padding for better spacing */
+    border-radius: 20px;
+    border: 8px solid rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 30px; /* Increase gap between links */
+    margin: 0 auto; /* Ensures it's centered */
+}
+
+/* Navbar Links */
+.nav-links li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px 20px; /* More padding for better spacing */
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.nav-links li:hover {
+    transform: scale(1.1);
+}
+
+.nav-links li a:hover {
+    color: rgb(255, 204, 0); /* Turns yellow */
+}
+
+.profile-icon {
+    position: absolute;
+    top: 50%;
+    right: 10%; /* More adaptive than left: 87% */
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+/* SVG Icon Styling */
+.profile-icon svg {
+    width: 48px;
+    height: 48px;
+    transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+/* Hover Effect */
+.profile-icon:hover svg {
+    transform: scale(1.1); /* Slightly enlarges */ 
+    fill: #ffcc00;
+}
+
+/* Tooltip Styling */
+.tooltip {
+    visibility: hidden;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 100%; /* Ensures it doesn’t overlap */
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.profile-icon:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* 📌 Responsive Design */
+@media (max-width: 1024px) {
+    .profile-icon {
+        right: 3%;
+    }
+
+    .profile-icon svg {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-icon {
+        right: 2%;
+    }
+
+    .profile-icon svg {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+
+/* Video Banner */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-text {
+    position: absolute;
+    text-align: center;
+    z-index: 2;
+    max-width: 90%;
+    padding: 40px;
+}
+.banner-text {
+    background-color: rgba(0, 0, 0, 0.5); /* Black background */
+    padding: 10px; /* Adds spacing inside the background */
+    text-align: center; /* Centers the text */
+    border-radius: 30px;
+}
+.banner-text h1 {
+    font-family: 'Artegra Sans SC', sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+    color: rgba(243, 217, 46);
+    display: inline-block; 
+}
+
+.banner-text p {
+    font-family: 'Artegra Sans SC', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: rgb(248, 247, 242);
+}
+
+/* Content Section */
+.content-section {
+    background: #111;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+/* Chatbot Icon */
+#chatbot-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 50%;
+    background: rgb(0, 0, 0);
+    box-shadow: 0 0 10px black;
+}
+#chatbot-icon img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+/* Chatbot Window */
+#chat-container {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 320px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    display: none;
+    flex-direction: column;
+    border: 2px solid black;
+    overflow: hidden;
+}
+#chat-header {
+    background: black;
+    color: yellow;
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#close-chatbot {
+    cursor: pointer;
+    font-size: 18px;
+    color: yellow;
+    font-weight: bold;
+}
+#close-chatbot:hover {
+    color: red;
+}
+
+/* Chatbox Area */
+#chat-box {
+    height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    background: rgb(47,47,48);
+    display: flex;
+    flex-direction: column;
+}
+/* General Page Styling */
+body {
+    background-color: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+/* Ensure the background scrolls with the content */
+#explore-section {
+    background-image: url('contact-bg1.png'); /* Replace with your actual image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll; /* Ensures it scrolls with content */
+    background-position: center;
+    min-height: 100vh; /* Ensures section covers full height */
+    padding: 20px 0;
+}
+
+
+/* Container for scholarship boxes */
+#scholarship-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 18px; /* Moderate spacing */
+    max-width: 75%; /* Balanced width */
+    margin: 0 auto;
+    margin-top: 200px;
+    padding: 18px;
+    
+}
+
+/* Scholarship category boxes */
+.scholarship-category {
+    background: rgba(218, 165, 32, 0.9); /* Gold with slight transparency */
+    padding: 18px;
+    text-align: center;
+    border-radius: 8px;
+    width: 260px; /* Medium width */
+    height: 230px; /* Medium height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Ensures even spacing */
+    align-items: center;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    color: black;
+}
+
+/* Title styling */
+.scholarship-category h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 2px; /* Reduced gap between title and subtext */
+    color: black;
+}
+
+/* Description alignment */
+.scholarship-category p {
+    font-size: 14px;
+    margin-bottom: 8px; /* Reduced space below subtext */
+    text-align: center;
+    padding: 0 10px;
+    color: black;
+}
+
+/* Button Styling */
+.view-btn {
+    background: black;
+    color: white;
+    padding: 10px 18px; /* Adjusted padding */
+    border: none;
+    cursor: pointer;
+    margin-top: 6px;
+    border-radius: 50px; /* Fully rounded button */
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Pop-out effect on hover */
+.view-btn:hover {
+    transform: scale(1.1); /* Makes the button pop out */
+    background: white;
+    color: black;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Wrap scholarships + footer in a vertical flex container */
+#scholarship-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 225px; /* Added spacing to prevent navbar overlap */
+}
+
+/* Ensure #scholarship-list takes full width */
+#scholarship-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    width: 75%;
+    margin: 0 auto;
+    padding: 18px;
+}
+
+/* Updated Footer Styling */
+#scholarship-footer {
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(to right, #000000, #333333); /* Smooth dark gradient */
+    color: white;
+    padding: 50px 20px; /* Increased padding */
+    margin-top: -20px; 
+    margin-bottom: 20px;/* Extra spacing above footer */
+    border-radius: 10px 10px 0 0; /* Soft rounded corners at the top */
+}
+
+/* Footer heading */
+#scholarship-footer h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+/* Highlighted span in the heading */
+#scholarship-footer h2 span {
+    color: gold; /* Matches the scholarship box theme */
+}
+
+/* Scholarship Features Section */
+.scholarship-features {
+    display: flex;
+    flex-direction: column; /* Center items vertically */
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 100px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #scholarship-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .scholarship-features {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #scholarship-footer {
+        padding: 40px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    #scholarship-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #scholarship-footer {
+        padding: 35px 10px;
+    }
+}
+/* Ensure #scholarship-list takes full width and fits the screen */
+#scholarship-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px; /* Reduced gap to fit content */
+    width: 90%; /* Increase width to fit screen */
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/* Adjust scholarship category size to fit better */
+.scholarship-category {
+    width: 240px; /* Slightly smaller width */
+    height: 210px; /* Slightly smaller height */
+}
+
+/* Footer Styling - Removing background from text */
+#scholarship-footer {
+    width: 100%;
+    text-align: center;
+    background: transparent; /* Ensure no background */
+    color: white;
+    padding: 40px 20px;
+    margin-top: 0px; /* Adjust spacing */
+    border-radius: 10px 10px 0 0;
+}
+
+/* Footer heading */
+#scholarship-footer h2 {
+    font-size: 22px; /* Adjusted for better fit */
+    font-weight: bold;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 1024px) {
+    #scholarship-list {
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+    }
+
+    .scholarship-category {
+        width: 220px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    #scholarship-list {
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+    }
+
+    .scholarship-category {
+        width: 100%;
+    }
+}/* Background settings */
+/* Background settings */
+#apply-section {
+    background-image: url('application.png'); /* Ensure correct path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+}
+
+/* Form container */
+.form-container {
+    background: rgba(255, 255, 255, 0.1); /* Light transparent background */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.2);
+    width: 80%;
+    max-width: 800px;
+    max-height: 600px;
+    overflow-y: auto; /* Enables scrolling if needed */
+    text-align: center;
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Form Structure */
+#application-form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Multi-step form handling */
+.form-step {
+    width: 100%;
+    max-height: 450px; /* Adjust for better fit */
+    overflow-y: auto;
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+}
+
+/* Form Inputs */
+.form-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px; /* Reduce spacing */
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    flex: 1;
+    min-width: 48%;
+    padding: 8px;
+    border: 1px solid white;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Adjust button placement */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Buttons */
+button {
+    padding: 12px 24px;  /* Increased padding */
+    font-size: 16px;      /* Larger font */
+    font-weight: bold;    /* Make text more prominent */
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;   /* Slightly rounded corners */
+    transition: 0.3s;
+    width: auto;          /* Adjust width dynamically */
+    min-width: 160px;     /* Ensure consistent size */
+}
+
+
+/* Button Styles */
+.next-btn {
+    background: #007bff;
+    color: white;
+}
+
+.prev-btn {
+    background: #6c757d;
+    color: white;
+}
+
+.submit-btn {
+    background: #28a745;
+    color: white;
+}
+
+/* Button Hover Effects */
+button:hover {
+    opacity: 0.8;
+}
+#application-footer {
+    width: 100%;
+    text-align: center;
+    background: transparent; /* Ensure no background */
+    color: white;
+    padding: 20px;
+    margin-top: 20px; /* Adjust spacing */
+    border-radius: 10px 10px 0 0;
+}
+
+#application-footer h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.application-features p {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+/* User Input Section */
+#chat-input-container {
+    display: flex;
+    border-top: 2px solid black;
+}
+#user-input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: rgb(47, 47, 46);
+    color: black;
+    font-size: 16px;
+}
+#send-btn {
+    padding: 10px 15px;
+    background: black;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+#send-btn:hover {
+    background: yellow;
+    color: black;
+}
+
+/* Chat Messages */
+.user-message {
+    text-align: right;
+    background: rgb(255, 255, 0);
+    padding: 8px;
+    margin: 5px;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    align-self: flex-end;
+}
+.bot-message {
+    text-align: left;
+    background: black;
+    padding: 8px;
+    margin: 5px;
+    border-radius: 5px;
+    color: yellow;
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+/* FAQ Buttons */
+.faq-button {
+    background: black;
+    color: yellow;
+    border: none;
+    padding: 8px;
+    margin: 5px 0;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.faq-button:hover {
+    background: yellow;
+    color: black;
+}
+
+
+/* Box Container */
+.box-container {
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    top: -130px;
+    width: 100%;
+    justify-content: center;
+}
+
+.box {
+    width: 120px;
+    height: 250px;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Artegra Sans SC', sans-serif;
+    color: white;
+    border-radius: 12px;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    padding: 10px;
+}
+
+.box img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.box-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 2px;
+}
+
+.box-subtext {
+    font-size: 12px;
+    color: gray;
+}
+
+/* Hover Effect for Pop-up */
+.box:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Scroll Sections */
+.scroll-section {
+    height: 100vh;
+    background-color: #111;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+/* Enable Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Form Container */
+.form-container {
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    width: 500px;
+    margin: auto;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Title Styling */
+.form-container h2 {
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.form-container h2 span {
+    align-items: center;
+    color: #ffcc00;
+}
+
+/* Signup & Login Tabs */
+.form-header {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.form-header h3 {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.form-header .active {
+    border-bottom: 3px solid #ffcc00;
+    opacity: 1;
+}
+
+/* Description Text */
+.form-container p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.form-container p a {
+    align-items: center;
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Input Groups */
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.input-group input {
+    width: 48%;
+}
+
+/* Input Fields */
+.form-container input {
+    width: 100%;
+    padding: 12px;
+    background: black;
+    border: 1px solid #ffcc00;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    align-items: center;
+}
+
+.form-container input::placeholder {
+    align-items: center;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Submit Button */
+.submit-btn {
+    align-items: center;
+    width: 100%;
+    padding: 12px;
+    background: #ffcc00;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background: #e6b800;
+}
+
+
+
+/* Form Container - Matches Signup */
+.form-container {
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 70px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    width: 500px;
+    margin: auto;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Title Styling */
+.form-container h2 {
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.form-container h2 span {
+    align-items: center;
+    color: #ffcc00;
+}
+
+/* Signup & Login Tabs */
+.form-header {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.form-header h3 {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.form-header .active {
+    border-bottom: 3px solid #ffcc00;
+    opacity: 1;
+}
+
+/* Description Text */
+.form-container p {
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.form-container p a {
+    align-items: center;
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+    align-items: center;
+}
+
+/* Input Fields */
+.form-container input {
+    align-items: center;
+    width: 100%;
+    padding: 12px;
+    background: black;
+    border: 1px solid #ffcc00;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.form-container input::placeholder {
+    align-items: center;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 105.6%;
+    text-align: center;
+    padding: 12px;
+    background: #ffcc00;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid #ffcc00;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.submit-btn:hover {
+    background: #e6b800;
+}
+
+/* Forgot Password Link */
+.forgot-password {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.forgot-password a {
+    color: #ffcc00;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+#signup-section {
+    background-image: url("signupbg.png"); /* Replace with actual path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#login-section {
+    background-image: url("loginbg.png"); /* Replace with actual path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 50px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    width: 400px;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Fix input field width */
+.form-container input {
+    width: calc(100% - 24px);
+    padding: 12px;
+    background: black;
+    border: 1px solid #ffcc00;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Align Submit Button & Forgot Password */
+.form-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: #ffcc00;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid #ffcc00;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background: #e6b800;
+}
+
+.forgot-password {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.forgot-password a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 1440px) {
+    .box {
+        width: 180px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .box {
+        width: 150px;
+        height: 180px;
+    }
+    .nav-links {
+        gap: 15px;
+    }
+    .profile-icon {
+        right: 15px;
+    }
+    .banner-text h1 {
+        font-size: 36px;
+    }
+    .banner-text p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .box-container {
+        flex-direction: column;
+        top: 0;
+    }
+    .box {
+        width: 90%;
+        height: 160px;
+    }
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    .profile-icon {
+        font-size: 20px;
+    }
+    .banner-text h1 {
+        font-size: 28px;
+    }
+    .banner-text p {
+        font-size: 16px;
+    }
+}
+html {
+    scroll-behavior: smooth;
+}
+#testimony {
+    background: url('testimonial-bg.jpg') no-repeat center center/cover;
+    padding: 50px 20px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px rgba(17, 17, 16, 0.5);
+}
+
+#testimony h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(236, 236, 234, 0.5);
+}
+
+.testimonials-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.testimonial {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.testimonial img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.testimonial p {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.testimonial h4 {
+    font-size: 1rem;
+    margin-top: 10px;
+    font-weight: bold;
+}
+/* GUIDE SECTION */
+.guide-section {
+    position: relative;
+    background: url('aboutus.png') center/cover no-repeat;
+    padding: 100px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.guide-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.guide-title span {
+    color: #f3d92e; /* Highlighted keyword color */
+}
+
+/* STEPS CONTAINER */
+.guide-steps {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.step {
+    background: rgba(29, 27, 27, 0.9);
+    padding: 20px;
+    border-radius: 20px;
+    width: 280px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+}
+
+/* HIGHLIGHTED TEXT */
+.step h3 span {
+    color: #f3d92e;
+    font-weight: bold;
+}
+
+/* LINE BETWEEN STEPS */
+.step:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: #f3d92e;
+    top: 50%;
+    right: -25px;
+}
+#contact {
+    background: url('img02.jpeg') no-repeat center center/cover;
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.contact-form {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    background: #ff9800;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #e68900;
+}
+
+.contact-info {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #ff9800;
+}
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-container {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links li {
+    display: inline;
+}
+
+.footer-links a {
+    color: #ff9800;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.social-icons a:hover {
+    color: #ff9800;
+}

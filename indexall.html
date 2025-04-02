@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrantWit</title>
+    <link rel="stylesheet" href="stylesall.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="GrantWit Logo">
+            </a>
+        </div>
+    </header>
+    <div class="container">
+        <div class="overlay">
+            <h1>ALL SCHOLARSHIP</h1>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search by Scholarship, University, Degree">
+                <button onclick="searchScholarships()">SEARCH</button>
+            </div>
+
+            <div class="scholarship-list" id="scholarshipList">
+                <div class="scholarship-card" data-name="Rhodes Scholarship">
+                    <h3>Rhodes Scholarship</h3>
+                    <p>Offers full financial support for students to pursue a degree at the University of Oxford, UK.</p>
+                    <button class="view-details" data-target="rhodesDetails">VIEW DETAILS</button>
+                    <div id="rhodesDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The Rhodes Scholarship is a prestigious postgraduate award for exceptional students worldwide to study at the University of Oxford. It covers full tuition, living expenses, and airfare.</p>
+                        <p><strong>Eligibility:</strong> Requires a bachelor's degree, age restrictions apply (typically 18-24), and demonstrated academic excellence, leadership, and commitment to service.</p>
+                        <p><strong>Benefits:</strong> Full tuition coverage, living stipend, airfare, and membership in a global network.</p>
+                        <p><strong>Application:</strong> Involves a written application, interviews, and a country-specific selection process. Deadlines vary by country (usually August-October).</p>
+                        <p><a href="https://www.rhodeshouse.ox.ac.uk/" target="_blank">Visit Rhodes Scholarship Website</a></p>
+                    </div>
+                </div>
+
+                <div class="scholarship-card" data-name="Chevening Scholarship UK">
+                    <h3>Chevening Scholarship (UK)</h3>
+                    <p>Covers tuition, travel, and living expenses for international students in the UK.</p>
+                    <button class="view-details" data-target="cheveningDetails">VIEW DETAILS</button>
+                    <div id="cheveningDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> Chevening Scholarships are the UK government’s global scholarship program offering awards to outstanding scholars with leadership potential to study for a master’s degree at any UK university.</p>
+                        <p><strong>Eligibility:</strong> Must be a citizen of a Chevening-eligible country, have completed an undergraduate degree, and have at least two years of work experience.</p>
+                        <p><strong>Benefits:</strong> Tuition fees, living allowance, and return airfare.</p>
+                        <p><strong>Application:</strong> Requires an online application and interviews. Application period usually opens in August and closes in November.</p>
+                        <p><a href="https://www.chevening.org/" target="_blank">Visit Chevening Scholarship Website</a></p>
+                    </div>
+                </div>
+
+                <div class="scholarship-card" data-name="Fulbright Program">
+                    <h3>Fulbright Program</h3>
+                    <p>Funds international students for study or research in the United States.</p>
+                    <button class="view-details" data-target="fulbrightDetails">VIEW DETAILS</button>
+                    <div id="fulbrightDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The Fulbright Program is a prestigious scholarship program for U.S. and international students, scholars, teachers, professionals, scientists, and artists to study, teach, conduct research, and exchange ideas in the United States.</p>
+                        <p><strong>Eligibility:</strong> Varies by country, but generally requires a bachelor's degree or equivalent and a strong academic record. Some programs require language proficiency.</p>
+                        <p><strong>Benefits:</strong> Tuition, airfare, living stipend, and health insurance.</p>
+                        <p><strong>Application:</strong> Involves an online application and interviews. Application periods vary by country (usually February-October).</p>
+                        <p><a href="https://us.fulbrightonline.org/" target="_blank">Visit Fulbright Program Website</a></p>
+                    </div>
+                </div>
+
+                <div class="scholarship-card" data-name="Japan MEXT Scholarship">
+                    <h3>Japan MEXT Scholarship</h3>
+                    <p>Covers tuition, living costs, and travel for international students in Japan.</p>
+                    <button class="view-details" data-target="mextDetails">VIEW DETAILS</button>
+                    <div id="mextDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The Japanese Government (MEXT) Scholarship offers opportunities for international students to study in Japan at undergraduate and graduate levels.</p>
+                        <p><strong>Eligibility:</strong> Must be a citizen of a country with diplomatic relations with Japan, meet age restrictions, and fulfill academic requirements that vary by program. Japanese language proficiency may be required.</p>
+                        <p><strong>Benefits:</strong> Full tuition exemption, monthly living allowance, and round-trip airfare.</p>
+                        <p><strong>Application:</strong> Requires application through the Japanese embassy or consulate, and may involve written examinations and interviews. Application periods vary (usually April-June).</p>
+                        <p><a href="https://www.studyinjapan.go.jp/en/smap_sto-scholarship/" target="_blank">Visit MEXT Scholarship Website</a></p>
+                    </div>
+                </div>
+
+                <div class="scholarship-card" data-name="Knight-Hennessy Scholars">
+                    <h3>Knight-Hennessy Scholars</h3>
+                    <p>Fully funds graduate study at Stanford University.</p>
+                    <button class="view-details" data-target="khsDetails">VIEW DETAILS</button>
+                    <div id="khsDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The Knight-Hennessy Scholars program at Stanford University provides full funding for graduate students across all disciplines, with a focus on leadership development.</p>
+                        <p><strong>Eligibility:</strong> Requires admission to a Stanford graduate program and demonstrated leadership and civic commitment. No age restriction.</p>
+                        <p><strong>Benefits:</strong> Full tuition coverage, living stipend, and leadership development programs.</p>
+                        <p><strong>Application:</strong> Involves a separate Knight-Hennessy application in addition to the graduate program application, and interviews. Application deadline is usually in October.</p>
+                        <p><a href="https://knight-hennessy.stanford.edu/" target="_blank">Visit Knight-Hennessy Scholars Website</a></p>
+                    </div>
+                </div>
+
+                <div class="scholarship-card" data-name="DAAD Scholarship">
+                    <h3>DAAD Scholarship</h3>
+                    <p>Provides full or partial funding for international students in Germany.</p>
+                    <button class="view-details" data-target="daadDetails">VIEW DETAILS</button>
+                    <div id="daadDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The DAAD (German Academic Exchange Service) provides scholarships for international students to study and research in Germany, offering various funding options.</p>
+                        <p><strong>Eligibility:</strong> Varies by program and country of origin; generally requires a bachelor's degree for master's and PhD programs and language proficiency (German or English).</p>
+                        <p><strong>Benefits:</strong> Monthly stipend, health insurance, and travel allowance (in some cases).</p>
+                        <p><strong>Application:</strong> Involves an online application through the DAAD portal with required documents. Deadlines vary by program (usually August-October).</p>
+                        <p><a href="https://www.daad.de/en/" target="_blank">Visit DAAD Scholarship Website</a></p>
+                    </div>
+                </div>
+
+                <div class="scholarship-card" data-name="Erasmus Mundus Scholarship">
+                    <h3>Erasmus Mundus Scholarship</h3>
+                    <p>Covers tuition and living expenses for international students in Europe.</p>
+                    <button class="view-details" data-target="erasmusDetails">VIEW DETAILS</button>
+                    <div id="erasmusDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The Erasmus Mundus program offers EU-funded scholarships for master's and doctoral programs delivered by a consortium of European universities.</p>
+                        <p><strong>Eligibility:</strong> Requires a bachelor's degree and admission to an Erasmus Mundus joint program; nationality from aparticipating country.</p>
+                        <p><strong>Benefits:</strong> Tuition fees, monthly living allowance, travel and installation costs, and health insurance.</p>
+                        <p><strong>Application:</strong> Requires direct application to the Erasmus Mundus joint program. Deadlines vary by program (usually January-March).</p>
+                        <p><a href="https://erasmus-plus.ec.europa.eu/opportunities/individuals/students/erasmus-mundus-joint-masters-degrees" target="_blank">Visit Erasmus Mundus Scholarship Website</a></p>
+                    </div>
+                </div>
+
+                <div class="scholarship-card" data-name="Korean Government Scholarship">
+                    <h3>Korean Government Scholarship</h3>
+                    <p>Fully funds undergraduate or graduate studies.</p>
+                    <button class="view-details" data-target="kgsDetails">VIEW DETAILS</button>
+                    <div id="kgsDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The Korean Government Scholarship Program (KGSP) offers opportunities for international students to pursue degrees in Korea with full funding.</p>
+                        <p><strong>Eligibility:</strong> Must be a national from a country invited by the Korean government, meet age restrictions, and fulfill academic requirements. Korean language proficiency may be required.</p>
+                        <p><strong>Benefits:</strong> Full tuition fee exemption, monthly living allowance, round-trip airfare, and Korean language training.</p>
+                        <p><strong>Application:</strong> Requires application through the Korean embassy or a designated university, with interviews and document review. Deadlines vary (usually September-October).</p>
+                        <p><a href="https://www.studyinkorea.go.kr/en/scholarships.do" target="_blank">Visit Korean Government Scholarship Website</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scriptall.js"></script>
+</body>
+</html>

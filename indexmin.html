@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrantWit - Minority Based Scholarships</title>
+    <link rel="stylesheet" href="stylesmin.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="GrantWit Logo">
+            </a>
+        </div>
+    </header>
+    <div class="container">
+        <div class="overlay">
+            <h1>MINORITY BASED SCHOLARSHIPS</h1>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search by Scholarship, University, Degree">
+                <button onclick="searchScholarships()">SEARCH</button>
+            </div>
+
+            <div class="scholarship-list" id="scholarshipList">
+                <div class="scholarship-card" data-name="Mastercard Foundation Scholars Program">
+                    <h3>Mastercard Foundation Scholars Program</h3>
+                    <p>Fully funds African students from disadvantaged backgrounds for undergraduate and graduate study.</p>
+                    <button class="view-details" data-target="mastercardDetails">VIEW DETAILS</button>
+                    <div id="mastercardDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The Mastercard Foundation Scholars Program provides access to quality education for young people from economically disadvantaged communities in Africa, enabling them to become leaders and drive change in their communities.</p>
+                        <p><strong>Eligibility:</strong> Must be a citizen of an African country, demonstrate academic talent, leadership potential, and a commitment to giving back to their communities. Financial need is also a key criterion.</p>
+                        <p><strong>Benefits:</strong> Full tuition fees, accommodation, living expenses, travel, and comprehensive support services.</p>
+                        <p><strong>Application:</strong> Requires application through partner universities, with specific requirements and deadlines varying by institution.</p>
+                        <p><a href="https://mastercardfdn.org/all/scholars-program/" target="_blank">Visit Mastercard Foundation Scholars Program Website</a></p>
+                    </div>
+                </div>
+
+                <div class="scholarship-card" data-name="Aga Khan Foundation International Scholarship">
+                    <h3>Aga Khan Foundation International Scholarship</h3>
+                    <p>Provides need-based scholarships to students from select developing countries.</p>
+                    <button class="view-details" data-target="agaKhanDetails">VIEW DETAILS</button>
+                    <div id="agaKhanDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The Aga Khan Foundation International Scholarship Programme provides a limited number of need-based scholarships each year for postgraduate studies to outstanding students from select developing countries.</p>
+                        <p><strong>Eligibility:</strong> Must be a national of a developing country where AKF has programmes, have a bachelor’s degree, and demonstrate financial need. Preference is given to students who have obtained admission to reputable universities.</p>
+                        <p><strong>Benefits:</strong> Tuition fees and living expenses, provided as a 50% grant and 50% loan.</p>
+                        <p><strong>Application:</strong> Requires application through AKF offices in their country of residence. Deadlines vary by country.</p>
+                        <p><a href="https://www.akdn.org/our-programmes/aga-khan-foundation/international-scholarship-programme" target="_blank">Visit Aga Khan Foundation International Scholarship Website</a></p>
+                    </div>
+                </div>
+
+                <div class="scholarship-card" data-name="Joint Japan/World Bank Graduate Scholarship">
+                    <h3>Joint Japan/World Bank Graduate Scholarship</h3>
+                    <p>Supports students from developing countries pursuing graduate studies in development-related fields.</p>
+                    <button class="view-details" data-target="jjwDetails">VIEW DETAILS</button>
+                    <div id="jjwDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The Joint Japan/World Bank Graduate Scholarship Program (JJ/WBGSP) supports students from developing countries to pursue graduate studies in development-related fields at participating universities worldwide.</p>
+                        <p><strong>Eligibility:</strong> Must be a citizen of a developing World Bank member country, have a bachelor’s degree, and have at least three years of development-related work experience. Must be admitted to a participating master's program.</p>
+                        <p><strong>Benefits:</strong> Full tuition fees, living allowance, round-trip air travel, and health insurance.</p>
+                        <p><strong>Application:</strong> Requires application through participating universities, with specific requirements and deadlines varying by institution.</p>
+                        <p><a href="https://www.worldbank.org/en/programs/scholarships" target="_blank">Visit Joint Japan/World Bank Graduate Scholarship Website</a></p>
+                    </div>
+                </div>
+
+                <div class="scholarship-card" data-name="American Association of University Women">
+                    <h3>American Association of University Women</h3>
+                    <p>Provides financial support to women pursuing graduate studies in the U.S.</p>
+                    <button class="view-details" data-target="aauwDetails">VIEW DETAILS</button>
+                    <div id="aauwDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The American Association of University Women (AAUW) offers fellowships and grants to women pursuing graduate and postgraduate studies in the United States.</p>
+                        <p><strong>Eligibility:</strong> Must be a woman with a bachelor’s degree, pursuing a graduate degree in the U.S. Specific requirements vary by fellowship.</p>
+                        <p><strong>Benefits:</strong> Varies depending on the fellowship, ranging from $20,000 to $50,000.</p>
+                        <p><strong>Application:</strong> Requires an online application with essays and recommendations. Deadlines vary by fellowship (usually in November).</p>
+                        <p><a href="https://www.aauw.org/resources/programs/fellowships-grants/" target="_blank">Visit AAUW Fellowships and Grants Website</a></p>
+                    </div>
+                </div>
+
+                <div class="scholarship-card" data-name="AAUW International Fellowship (USA)">
+                    <h3>AAUW International Fellowship (USA)</h3>
+                    <p>Supports women pursuing graduate or postgraduate study in the U.S.</p>
+                    <button class="view-details" data-target="aauwIntDetails">VIEW DETAILS</button>
+                    <div id="aauwIntDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The AAUW International Fellowships are awarded for full-time study or research in the United States to women who are not U.S. citizens or permanent residents.</p>
+                        <p><strong>Eligibility:</strong> Must have a bachelor's degree, be a woman with citizenship in a country other than the U.S., and intend to return to their home country to pursue a professional career.</p>
+                        <p><strong>Benefits:</strong> Varies depending on the level of study ($20,000 for Master's, $25,000 for PhD, and $50,000 for postdoctoral).</p>
+                        <p><strong>Application:</strong> Requires an online application, essays, and recommendations. Deadline is usually in November.</p>
+                        <p><a href="https://www.aauw.org/resources/programs/fellowships-grants/international/" target="_blank">Visit AAUW International Fellowship Website</a></p>
+                    </div>
+                </div>
+
+                <div class="scholarship-card" data-name="PEO International Peace Scholarship">
+                    <h3>PEO International Peace Scholarship</h3>
+                    <p>Supports international women students for graduate studies in the U.S. and Canada.</p>
+                    <button class="view-details" data-target="peoDetails">VIEW DETAILS</button>
+                    <div id="peoDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The P.E.O. International Peace Scholarship Fund (IPS) is a program that provides scholarships for international women students to pursue graduate studies in the United States and Canada.</p>
+                        <p><strong>Eligibility:</strong> Must be a woman from a country other than the U.S. or Canada, have a bachelor’s degree, and be accepted into a graduate program in the U.S. or Canada.</p>
+                        <p><strong>Benefits:</strong> Up to $12,500.</p>
+                        <p><strong>Application:</strong> Requires application through a P.E.O. chapter. Deadlines vary.</p>
+                        <p><a href="https://www.peointernational.org/international-peace-scholarship-ips" target="_blank">Visit PEO International Peace Scholarship Website</a></p>
+                    </div>
+                </div>
+
+                <div class="scholarship-card" data-name="Turkiye Burslari Scholarship">
+                    <h3>Turkiye Burslari Scholarship</h3>
+                    <p>Prioritizes students from underrepresented regions and developing countries.</p>
+                    <button class="view-details" data-target="turkiyeDetails">VIEW DETAILS</button>
+                    <div id="turkiyeDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The Türkiye Bursları Scholarship is a government-funded scholarship program that provides opportunities for international students to study in Turkey at undergraduate, graduate, and doctoral levels.</p>
+                        <p><strong>Eligibility:</strong> Must be a citizen of a country other than Turkey, meet age restrictions, and fulfill academic requirements. Priority is given to students from underrepresented regions and developing countries.</p>
+                        <p><strong>Benefits:</strong> Full tuition fees, accommodation, monthly stipend, travel allowance, and health insurance.</p>
+                        <p><strong>Application:</strong> Requires an online application. Deadline is usually in February.</p>
+                        <p><a href="https://www.turkiyeburslari.gov.tr/en/" target="_blank">Visit Turkiye Burslari Scholarship Website</a></p>
+                    </div>
+                </div>
+
+                <div class="scholarship-card" data-name="Gates Millennium Scholars Program">
+                    <h3>Gates Millennium Scholars Program</h3>
+                    <p>Offers funding to outstanding minority students in the U.S. pursuing undergraduate and graduate studies.</p>
+                    <button class="view-details" data-target="gatesMillenniumDetails">VIEW DETAILS</button>
+                    <div id="gatesMillenniumDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The Gates Millennium Scholars (GMS) Program was a scholarship program funded by the Bill & Melinda Gates Foundation that provided scholarships to outstanding minority students with significant financial need to attend any college or university of their choice. (Note: The program is no longer accepting new applications, but information is still available for past recipients)</p>
+                        <p><strong>Eligibility:</strong> Must have been an African American, American Indian/Alaska Native, Asian Pacific Islander American, or Hispanic American student, a U.S. citizen or permanent resident, and have demonstrated significant financial need. (Note: The program is no longer accepting new applications)</p>
+                        <p><strong>Benefits:</strong> Full tuition fees, room and board, and books. (Note: The program is no longer accepting new applications)</p>
+                        <p><strong>Application:</strong> (Note: The program is no longer accepting new applications)</p>
+                        <p><a href="https://www.gmsp.org/" target="_blank">Visit Gates Millennium Scholars Program Website (for past recipients)</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scriptall.js"></script>
+</body>
+</html>

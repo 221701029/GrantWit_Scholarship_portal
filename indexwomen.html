@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrantWit - Women Based Scholarships</title>
+    <link rel="stylesheet" href="styleswomen.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="GrantWit Logo">
+            </a>
+        </div>
+    </header>
+    <div class="container">
+        <div class="overlay">
+            <h1>WOMEN BASED SCHOLARSHIP</h1>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search by Scholarship, University, Degree">
+                <button onclick="searchScholarships()">SEARCH</button>
+            </div>
+
+            <div class="scholarship-list" id="scholarshipList">
+                <div class="scholarship-card" data-name="Women Techmakers Scholarship">
+                    <h3>Women Techmakers Scholarship</h3>
+                    <p>Awards women in computer science and technology-related fields.</p>
+                    <button class="view-details" data-target="techmakersDetails">VIEW DETAILS</button>
+                    <div id="techmakersDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The Women Techmakers Scholarship provides awards to women pursuing degrees in computer science and technology-related fields, aiming to increase gender diversity in tech.</p>
+                        <p><strong>Eligibility:</strong> Open to women pursuing undergraduate or graduate degrees in computer science or related fields. Specific requirements vary by region.</p>
+                        <p><strong>Benefits:</strong> Financial support, mentorship opportunities, and access to a global network of women in tech.</p>
+                        <p><strong>Application:</strong> Requires an online application, including essays and academic transcripts. Deadlines vary by region (typically in March-April).</p>
+                        <p><a href="https://www.womentechmakers.com/" target="_blank">Visit Women Techmakers Website</a></p>
+                    </div>
+                </div>
+
+                <div class="scholarship-card" data-name="Girls Who Code Scholarships">
+                    <h3>Girls Who Code Scholarships</h3>
+                    <p>Offers financial aid for women in technology-related programs.</p>
+                    <button class="view-details" data-target="girlswhocodeDetails">VIEW DETAILS</button>
+                    <div id="girlswhocodeDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> Girls Who Code offers scholarships and grants to support women pursuing education in technology and related fields, aiming to close the gender gap in tech.</p>
+                        <p><strong>Eligibility:</strong> Open to women pursuing degrees or certificates in computer science, engineering, or related fields. Specific requirements vary by program.</p>
+                        <p><strong>Benefits:</strong> Financial aid, access to workshops, and networking opportunities.</p>
+                        <p><strong>Application:</strong> Requires an online application with personal statements and academic information. Deadlines vary by scholarship (check individual program pages).</p>
+                        <p><a href="https://girlswhocode.com/" target="_blank">Visit Girls Who Code Website</a></p>
+                    </div>
+                </div>
+
+                <div class="scholarship-card" data-name="UNESCO Women's Scholarships">
+                    <h3>UNESCO Women's Scholarships</h3>
+                    <p>Offers grants and scholarships for women in education and STEM.</p>
+                    <button class="view-details" data-target="unescoDetails">VIEW DETAILS</button>
+                    <div id="unescoDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> UNESCO offers various scholarships and grants to support women in pursuing education and careers in STEM fields, promoting gender equality in science.</p>
+                        <p><strong>Eligibility:</strong> Open to women pursuing advanced degrees or research in STEM fields. Specific requirements vary by scholarship program.</p>
+                        <p><strong>Benefits:</strong> Financial support, research grants, and opportunities to participate in UNESCO programs.</p>
+                        <p><strong>Application:</strong> Requires an online application with research proposals and academic records. Deadlines vary by program (check UNESCO website for specific calls).</p>
+                        <p><a href="https://en.unesco.org/" target="_blank">Visit UNESCO Website</a></p>
+                    </div>
+                </div>
+
+                <div class="scholarship-card" data-name="Soroptimist Live Your Dream Award">
+                    <h3>Soroptimist Live Your Dream Award</h3>
+                    <p>Supports women who are the primary financial support for their families.</p>
+                    <button class="view-details" data-target="soroptimistDetails">VIEW DETAILS</button>
+                    <div id="soroptimistDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The Soroptimist Live Your Dream Award assists women who provide the primary financial support for their families by giving them the resources they need to improve their education, skills, and employment prospects.</p>
+                        <p><strong>Eligibility:</strong> Open to women who are the primary financial support for their families and are enrolled in or have been accepted to a vocational/skills training program or an undergraduate degree.</p>
+                        <p><strong>Benefits:</strong> Cash awards to help offset costs associated with education, such as tuition, books, childcare, and transportation.</p>
+                        <p><strong>Application:</strong> Requires an online application and may involve an interview. Deadlines vary by region (typically in November-December).</p>
+                        <p><a href="https://www.soroptimist.org/" target="_blank">Visit Soroptimist Website</a></p>
+                    </div>
+                </div>
+
+                <div class="scholarship-card" data-name="Margaret McNamara Education Grants">
+                    <h3>Margaret McNamara Education Grants</h3>
+                    <p>Supports women from developing countries pursuing higher education.</p>
+                    <button class="view-details" data-target="mmeDetails">VIEW DETAILS</button>
+                    <div id="mmeDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The Margaret McNamara Education Grants (MMEG) support women from developing countries who are pursuing higher education to empower themselves and contribute to their communities.</p>
+                        <p><strong>Eligibility:</strong> Open to women from developing countries enrolled at select universities in the US, Canada, Latin America, and South Africa. Specific requirements vary by country.</p>
+                        <p><strong>Benefits:</strong> Financial grants to support tuition and living expenses.</p>
+                        <p><strong>Application:</strong> Requires an online application with academic transcripts and letters of recommendation. Deadlines vary by country (typically in January-February).</p>
+                        <p><a href="https://www.mmeg.org/" target="_blank">Visit MMEG Website</a></p>
+                    </div>
+                </div>
+
+                <div class="scholarship-card" data-name="DAAD Scholarship">
+                    <h3>DAAD Scholarship</h3>
+                    <p>Provides full or partial funding for international students in Germany.</p>
+                    <button class="view-details" data-target="daadDetails">VIEW DETAILS</button>
+                    <div id="daadDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The DAAD (German Academic Exchange Service) provides scholarships for international students, including women, to study and research in Germany, offering various funding options.</p>
+                        <p><strong>Eligibility:</strong> Varies by program and country of origin; generally requires a bachelor's degree for master's and PhD programs and language proficiency (German or English).</p>
+                        <p><strong>Benefits:</strong> Monthly stipend, health insurance, and travel allowance (in some cases).</p>
+                        <p><strong>Application:</strong> Involves an online application through the DAAD portal with required documents. Deadlines vary by program (usually August-October).</p>
+                        <p><a href="https://www.daad.de/en/" target="_blank">Visit DAAD Scholarship Website</a></p>
+                    </div>
+                </div>
+
+                <div class="scholarship-card" data-name="Women's Engineering Society">
+                    <h3>Women's Engineering Society</h3>
+                    <p>Supports women in engineering and technology programs.</p>
+                    <button class="view-details" data-target="wesDetails">VIEW DETAILS</button>
+                    <div id="wesDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The Women's Engineering Society (WES) offers scholarships and awards to support women pursuing careers in engineering and technology, aiming to increase female representation in these fields.</p>
+                        <p><strong>Eligibility:</strong> Open to women pursuing undergraduate or graduate degrees in engineering or technology-related fields in the UK. Specific requirements vary by scholarship.</p>
+                        <p><strong>Benefits:</strong> Financial assistance, mentorship, and networking opportunities.</p>
+                        <p><strong>Application:</strong> Requires an online application and may include essays and letters of recommendation. Deadlines vary by scholarship (check WES website for specific calls).</p>
+                        <p><a href="https://www.wes.org.uk/" target="_blank">Visit Women's Engineering Society Website</a></p>
+                    </div>
+                </div>
+                <div class="scholarship-card" data-name="The Dorothy Marchus Senesh Fellowship">
+                    <h3>The Dorothy Marchus Senesh Fellowship</h3>
+                    <p>Supports women in peace and development studies.</p>
+                    <button class="view-details" data-target="seneshDetails">VIEW DETAILS</button>
+                    <div id="seneshDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The Dorothy Marchus Senesh Fellowship provides financial assistance to women from developing countries pursuing graduate studies in peace and development-related fields.</p>
+                        <p><strong>Eligibility:</strong> Open to women from developing countries pursuing graduate studies in peace, development, or related fields. Specific requirements vary by program.</p>
+                        <p><strong>Benefits:</strong> Financial support for tuition and living expenses.</p>
+                        <p><strong>Application:</strong> Requires an online application with academic transcripts, letters of recommendation, and a statement of purpose. Deadlines vary (typically in March).</p>
+                        <p><a href="https://iprafrica.org/dorothy-marcus-senesh-fellowship/" target="_blank">Visit Senesh Fellowship Website</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scriptwomen.js"></script>
+</body>
+</html>

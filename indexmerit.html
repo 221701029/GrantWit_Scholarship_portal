@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrantWit - Merit Based Scholarships</title>
+    <link rel="stylesheet" href="stylesmerit.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="GrantWit Logo">
+            </a>
+        </div>
+    </header>
+    <div class="container">
+        <div class="overlay">
+            <h1>MERIT BASED SCHOLARSHIPS</h1>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search by Scholarship, University, Degree">
+                <button onclick="searchScholarships()">SEARCH</button>
+            </div>
+
+            <div class="scholarship-list" id="scholarshipList">
+                <div class="scholarship-card" data-name="Australia Awards Scholarships">
+                    <h3>Australia Awards Scholarships</h3>
+                    <p>Merit-based, fully funded scholarships for students from developing nations.</p>
+                    <button class="view-details" data-target="australiaAwardsDetails">VIEW DETAILS</button>
+                    <div id="australiaAwardsDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The Australia Awards Scholarships offer opportunities for individuals from developing countries to undertake full-time undergraduate or postgraduate study at participating Australian universities and Technical and Further Education (TAFE) institutions.</p>
+                        <p><strong>Eligibility:</strong> Must be a citizen of a participating country, demonstrate academic potential, and meet specific eligibility criteria for their country and chosen field of study.</p>
+                        <p><strong>Benefits:</strong> Full tuition fees, return air travel, establishment allowance, contribution to living expenses, Overseas Student Health Cover, and supplementary academic support.</p>
+                        <p><strong>Application:</strong> Requires an online application, supporting documents, and may include interviews. Deadlines vary by country (usually between January and April).</p>
+                        <p><a href="https://www.dfat.gov.au/people-to-people/australia-awards/australia-awards-scholarships" target="_blank">Visit Australia Awards Scholarships Website</a></p>
+                    </div>
+                </div>
+
+                <div class="scholarship-card" data-name="ETH Zurich Excellence Scholarship">
+                    <h3>ETH Zurich Excellence Scholarship</h3>
+                    <p>Merit-based financial aid for top master's students at ETH Zurich.</p>
+                    <button class="view-details" data-target="ethZurichDetails">VIEW DETAILS</button>
+                    <div id="ethZurichDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The ETH Zurich Excellence Scholarship & Opportunity Programme (ESOP) supports excellent master's students with a scholarship, mentorship, and networking opportunities.</p>
+                        <p><strong>Eligibility:</strong> Requires excellent performance in bachelor's studies, admission to a master's program at ETH Zurich, and demonstrated motivation.</p>
+                        <p><strong>Benefits:</strong> Full or partial coverage of living and study expenses, tuition fee waiver, and mentorship.</p>
+                        <p><strong>Application:</strong> Involves applying for the master's program and a separate scholarship application. Deadlines vary by program (usually November-December).</p>
+                        <p><a href="https://ethz.ch/students/en/financing-and-scholarships/scholarships/excellence-scholarship-opportunity-programme.html" target="_blank">Visit ETH Zurich Excellence Scholarship Website</a></p>
+                    </div>
+                </div>
+
+                <div class="scholarship-card" data-name="Schwarzman Scholars (China)">
+                    <h3>Schwarzman Scholars (China)</h3>
+                    <p>Fully funds a master's degree at Tsinghua University in China.</p>
+                    <button class="view-details" data-target="schwarzmanDetails">VIEW DETAILS</button>
+                    <div id="schwarzmanDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The Schwarzman Scholars program is a fully funded master's program at Tsinghua University in Beijing, designed to build a global network of future leaders who can deepen understanding between China and the rest of the world.</p>
+                        <p><strong>Eligibility:</strong> Requires a bachelor's degree, English proficiency, and demonstrated leadership potential. Open to students from all countries.</p>
+                        <p><strong>Benefits:</strong> Full tuition fees, room and board, travel to and from Beijing, an in-country study tour, required course materials, health insurance, and a stipend for personal expenses.</p>
+                        <p><strong>Application:</strong> Involves an online application, essays, recommendations, and interviews. Deadlines vary by region (usually in September).</p>
+                        <p><a href="https://www.schwarzmanscholars.org/" target="_blank">Visit Schwarzman Scholars Website</a></p>
+                    </div>
+                </div>
+
+                <div class="scholarship-card" data-name="Vanier Canada Graduate Scholarships">
+                    <h3>Vanier Canada Graduate Scholarships</h3>
+                    <p>Provides funding to top doctoral students with leadership potential.</p>
+                    <button class="view-details" data-target="vanierDetails">VIEW DETAILS</button>
+                    <div id="vanierDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The Vanier Canada Graduate Scholarships (Vanier CGS) program aims to attract and retain world-class doctoral students by offering support to those who demonstrate both academic excellence and leadership potential.</p>
+                        <p><strong>Eligibility:</strong> Must be nominated by a Canadian university, be pursuing a doctoral degree in a health research, natural sciences and/or engineering, or social sciences and humanities field, and have a strong academic record.</p>
+                        <p><strong>Benefits:</strong> $50,000 per year for up to three years.</p>
+                        <p><strong>Application:</strong> Requires nomination by a Canadian university. Deadlines vary by faculty and university (usually between September and November).</p>
+                        <p><a href="http://www.vanier.gc.ca/en/home-accueil.html" target="_blank">Visit Vanier Canada Graduate Scholarships Website</a></p>
+                    </div>
+                </div>
+
+                <div class="scholarship-card" data-name="AAUW International Fellowship (USA)">
+                    <h3>AAUW International Fellowship (USA)</h3>
+                    <p>Supports women pursuing graduate or postgraduate study in the U.S.</p>
+                    <button class="view-details" data-target="aauwDetails">VIEW DETAILS</button>
+                    <div id="aauwDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The AAUW (American Association of University Women) International Fellowships are awarded for full-time study or research in the United States to women who are not U.S. citizens or permanent residents.</p>
+                        <p><strong>Eligibility:</strong> Must have a bachelor's degree, be a woman with citizenship in a country other than the U.S., and intend to return to their home country to pursue a professional career.</p>
+                        <p><strong>Benefits:</strong> Varies depending on the level of study ($20,000 for Master's, $25,000 for PhD, and $50,000 for postdoctoral).</p>
+                        <p><strong>Application:</strong> Requires an online application, essays, and recommendations. Deadline is usually in November.</p>
+                        <p><a href="https://www.aauw.org/resources/programs/fellowships-grants/international/" target="_blank">Visit AAUW International Fellowship Website</a></p>
+                    </div>
+                </div>
+
+                <div class="scholarship-card" data-name="Gates Cambridge Scholarship">
+                    <h3>Gates Cambridge Scholarship</h3>
+                    <p>Covers tuition and living expenses for exceptional students at Cambridge.</p>
+                    <button class="view-details" data-target="gatesCambridgeDetails">VIEW DETAILS</button>
+                    <div id="gatesCambridgeDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The Gates Cambridge Scholarships are awarded to outstanding applicants from countries outside the UK to pursue a full-time postgraduate degree in any subject available at the University of Cambridge.</p>
+                        <p><strong>Eligibility:</strong> Must be applying to pursue a postgraduate degree at the University of Cambridge, have outstanding intellectual ability, leadership potential, and a commitment to improving the lives of others.</p>
+                        <p><strong>Benefits:</strong> Full cost of studying at Cambridge, including tuition fees, maintenance allowance, airfare, and discretionary funding.</p>
+                        <p><strong>Application:</strong> Involves applying for admission to the University of Cambridge and a separate Gates Cambridge application. Deadlines vary by department (usually in December or January).</p>
+                        <p><a href="https://www.gatescambridge.org/" target="_blank">Visit Gates Cambridge Scholarship Website</a></p>
+                    </div>
+                </div>
+                <div class="scholarship-card" data-name="TaiwanICDF Scholarship">
+                    <h3>TaiwanICDF Scholarship</h3>
+                    <p>Fully funds international students for undergraduate and graduate programs.</p>
+                    <button class="view-details" data-target="taiwanIcdfDetails">VIEW DETAILS</button>
+                    <div id="taiwanIcdfDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The TaiwanICDF (International Cooperation and Development Fund) Scholarship Program provides full scholarships for selected international students to pursue undergraduate or graduate studies in Taiwan.</p>
+                        <p><strong>Eligibility:</strong> Must be a citizen of a partner country, meet specific academic requirements, and be proficient in English or Chinese (depending on the program).</p>
+                        <p><strong>Benefits:</strong> Full tuition fees, accommodation, living allowance, round-trip airfare, and insurance.</p>
+                        <p><strong>Application:</strong> Requires an online application and submission of documents through the Taiwan embassy or representative office. Deadlines vary by country (usually between January and March).</p>
+                        <p><a href="https://www.icdf.org.tw/wSite/np?ctNode=31561&mp=2" target="_blank">Visit TaiwanICDF Scholarship Website</a></p>
+                    </div>
+                </div>
+
+                <div class="scholarship-card" data-name="Erasmus Mundus Joint Master's Scholarship">
+                    <h3>Erasmus Mundus Joint Master's Scholarship</h3>
+                    <p>Funds talented students for master's programs at multiple European universities.</p>
+                    <button class="view-details" data-target="erasmusMundusDetails">VIEW DETAILS</button>
+                    <div id="erasmusMundusDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The Erasmus Mundus Joint Master's Degrees (EMJMD) are high-level integrated international study programs delivered by an international consortium of higher education institutions from different countries worldwide. The EU funds these programs to support talented students.</p>
+                        <p><strong>Eligibility:</strong> Requires a bachelor's degree or equivalent, and must meet the specific admission requirements of the chosen EMJMD program. Open to students from all countries.</p>
+                        <p><strong>Benefits:</strong> Full tuition fees, monthly allowance for living costs, travel and installation costs, and insurance coverage.</p>
+                        <p><strong>Application:</strong> Requires applying directly to the chosen Erasmus Mundus Joint Master's Degree program. Deadlines vary by program (usually between January and March).</p>
+                        <p><a href="https://erasmus-plus.ec.europa.eu/opportunities/individuals/students/erasmus-mundus-joint-masters-degrees" target="_blank">Visit Erasmus Mundus Joint Master's Degrees Website</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scriptall.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrantWit - Research Scholarships</title>
+    <link rel="stylesheet" href="stylesresearch.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="GrantWit Logo">
+            </a>
+        </div>
+    </header>
+    <div class="container">
+        <div class="overlay">
+            <h1>RESEARCH SCHOLARSHIPS</h1>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search by Scholarship, University, Degree">
+                <button onclick="searchScholarships()">SEARCH</button>
+            </div>
+
+            <div class="scholarship-list" id="scholarshipList">
+                <div class="scholarship-card" data-name="Singapore International Graduate Award">
+                    <h3>Singapore International Graduate Award</h3>
+                    <p>Fully funds PhD students conducting research in Singapore.</p>
+                    <button class="view-details" data-target="singaporeGraduateDetails">VIEW DETAILS</button>
+                    <div id="singaporeGraduateDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The Singapore International Graduate Award (SINGA) is a scholarship program that supports international students to pursue their PhD studies in Singapore at participating universities and research institutes.</p>
+                        <p><strong>Eligibility:</strong> Must be a graduate with a passion for research and excellent academic results. Open to all nationalities.</p>
+                        <p><strong>Benefits:</strong> Full tuition fees, monthly stipend, one-time settling-in allowance, and airfare grant.</p>
+                        <p><strong>Application:</strong> Requires an online application and interviews. Deadlines vary by intake (usually in January and August).</p>
+                        <p><a href="https://www.a-star.edu.sg/Scholarships/for-graduate-studies/singapore-international-graduate-award-singa" target="_blank">Visit Singapore International Graduate Award Website</a></p>
+                    </div>
+                </div>
+
+                <div class="scholarship-card" data-name="OPEC Fund for International Development">
+                    <h3>OPEC Fund for International Development</h3>
+                    <p>Funds research-focused master's students from developing countries.</p>
+                    <button class="view-details" data-target="opecFundDetails">VIEW DETAILS</button>
+                    <div id="opecFundDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The OPEC Fund for International Development (OFID) Scholarship provides opportunities for students from developing countries to pursue a master's degree in a development-related field.</p>
+                        <p><strong>Eligibility:</strong> Must be a national of a developing country, have a bachelor’s degree, and be accepted into a master's program related to development.</p>
+                        <p><strong>Benefits:</strong> Full tuition fees, monthly allowance, and travel expenses.</p>
+                        <p><strong>Application:</strong> Requires application through the chosen university, with specific requirements and deadlines varying by institution.</p>
+                        <p><a href="https://opecfund.org/what-we-offer/scholarships" target="_blank">Visit OPEC Fund for International Development Scholarship Website</a></p>
+                    </div>
+                </div>
+
+                <div class="scholarship-card" data-name="Korean Government Scholarship Program">
+                    <h3>Korean Government Scholarship Program</h3>
+                    <p>Offers grants and scholarships for women in education and STEM.</p>
+                    <button class="view-details" data-target="koreanGovernmentDetails">VIEW DETAILS</button>
+                    <div id="koreanGovernmentDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The Korean Government Scholarship Program (KGSP) provides opportunities for international students to pursue graduate studies and research in Korea, including specific programs for women in education and STEM fields.</p>
+                        <p><strong>Eligibility:</strong> Must be a national from a country invited by the Korean government, meet age restrictions, and fulfill academic requirements. Korean language proficiency may be required.</p>
+                        <p><strong>Benefits:</strong> Full tuition fee exemption, monthly living allowance, round-trip airfare, and Korean language training.</p>
+                        <p><strong>Application:</strong> Requires application through the Korean embassy or a designated university, with interviews and document review. Deadlines vary (usually September-October).</p>
+                        <p><a href="https://www.studyinkorea.go.kr/en/scholarships.do" target="_blank">Visit Korean Government Scholarship Program Website</a></p>
+                    </div>
+                </div>
+
+                <div class="scholarship-card" data-name="Soroptimist Live Your Dream Award">
+                    <h3>Soroptimist Live Your Dream Award</h3>
+                    <p>Supports research-based master's and PhD programs.</p>
+                    <button class="view-details" data-target="soroptimistDetails">VIEW DETAILS</button>
+                    <div id="soroptimistDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The Soroptimist Live Your Dream Awards (formerly the Women's Opportunity Awards) assist women who provide the primary financial support for their families by giving them the resources they need to improve their education, skills, and employment prospects.</p>
+                        <p><strong>Eligibility:</strong> Must be a woman who is the primary financial support for their family, have financial need, and be enrolled in or accepted to a vocational/skills training program or an undergraduate degree program.</p>
+                        <p><strong>Benefits:</strong> Cash awards to help offset costs associated with education, such as tuition, books, childcare, and transportation.</p>
+                        <p><strong>Application:</strong> Requires application through a local Soroptimist club. Deadlines vary by club.</p>
+                        <p><a href="https://www.soroptimist.org/our-programs/live-your-dream-awards/index.html" target="_blank">Visit Soroptimist Live Your Dream Award Website</a></p>
+                    </div>
+                </div>
+
+                <div class="scholarship-card" data-name="Vanier Canada Graduate Scholarships">
+                    <h3>Vanier Canada Graduate Scholarships</h3>
+                    <p>Provides funding for doctoral students with strong research potential.</p>
+                    <button class="view-details" data-target="vanierCanadaDetails">VIEW DETAILS</button>
+                    <div id="vanierCanadaDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The Vanier Canada Graduate Scholarships (Vanier CGS) program aims to attract and retain world-class doctoral students by offering support to those who demonstrate both academic excellence and leadership potential.</p>
+                        <p><strong>Eligibility:</strong> Must be nominated by a Canadian university, be pursuing a doctoral degree in a health research, natural sciences and/or engineering, or social sciences and humanities field, and have a strong academic record.</p>
+                        <p><strong>Benefits:</strong> $50,000 per year for up to three years.</p>
+                        <p><strong>Application:</strong> Requires nomination by a Canadian university. Deadlines vary by faculty and university (usually between September and November).</p>
+                        <p><a href="http://www.vanier.gc.ca/en/home-accueil.html" target="_blank">Visit Vanier Canada Graduate Scholarships Website</a></p>
+                    </div>
+                </div>
+
+                <div class="scholarship-card" data-name="Japan MEXT Research Scholarships">
+                    <h3>Japan MEXT Research Scholarships</h3>
+                    <p>Fully funds international students for research programs in Japan.</p>
+                    <button class="view-details" data-target="mextResearchDetails">VIEW DETAILS</button>
+                    <div id="mextResearchDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The Japanese Government (MEXT) Research Scholarship provides opportunities for international students to conduct research in Japanese universities.</p>
+                        <p><strong>Eligibility:</strong> Must be a citizen of a country with diplomatic relations with Japan, have a bachelor’s or master’s degree, and meet age restrictions. Japanese language proficiency may be required.</p>
+                        <p><strong>Benefits:</strong> Full tuition exemption, monthly living allowance, round-trip airfare, and research expenses.</p>
+                        <p><strong>Application:</strong> Requires application through the Japanese embassy or consulate. Deadlines vary (usually between April and June).</p>
+                        <p><a href="https://www.studyinjapan.go.jp/en/smap_sto-scholarship/" target="_blank">Visit MEXT Research Scholarship Website</a></p>
+                    </div>
+                </div>
+
+                <div class="scholarship-card" data-name="Erasmus Mundus Joint Doctorate">
+                    <h3>Erasmus Mundus Joint Doctorate</h3>
+                    <p>Supports international students for research-based PhD programs.</p>
+                    <button class="view-details" data-target="erasmusMundusDoctorateDetails">VIEW DETAILS</button>
+                    <div id="erasmusMundusDoctorateDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> Erasmus Mundus Joint Doctorates (EMJDs) are integrated international study programs delivered by a consortium of higher education institutions from different countries worldwide, offering research-based PhD programs.</p>
+                        <p><strong>Eligibility:</strong> Requires a master’s degree or equivalent and must meet the specific admission requirements of the chosen EMJD program. Open to students from all countries.</p>
+                        <p><strong>Benefits:</strong> Full tuition fees, monthly allowance for living costs, travel and installation costs, and insurance coverage.</p>
+                        <p><strong>Application:</strong> Requires applying directly to the chosen Erasmus Mundus Joint Doctorate program. Deadlines vary by program (usually between January and March).</p>
+                        <p><a href="https://erasmus-plus.ec.europa.eu/opportunities/individuals/students/erasmus-mundus-joint-masters-degrees" target="_blank">Visit Erasmus Mundus Joint Doctorates Website</a></p>
+                    </div>
+                </div>
+
+                <div class="scholarship-card" data-name="Marie Skłodowska-Curie Actions">
+                    <h3>Marie Skłodowska-Curie Actions</h3>
+                    <p>Funds PhD and postdoctoral research across Europe.</p>
+                    <button class="view-details" data-target="marieCurieDetails">VIEW DETAILS</button>
+                    <div id="marieCurieDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The Marie Skłodowska-Curie Actions (MSCA) are EU-funded fellowships that support researchers at all stages of their careers, across all disciplines, with funding for PhD and postdoctoral research across Europe.</p>
+                        <p><strong>Eligibility:</strong> Varies by action, but generally requires a master’s or PhD degree and research experience. Open to researchers from all countries.</p>
+                        <p><strong>Benefits:</strong> Competitive salary, research expenses, and career development opportunities.</p>
+                        <p><strong>Application:</strong> Requires applying for specific MSCA actions through the European Commission portal. Deadlines vary by action.</p>
+                        <p><a href="https://marie-sklodowska-curie-actions.ec.europa.eu/" target="_blank">Visit Marie Skłodowska-Curie Actions Website</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scriptall.js"></script>
+</body>
+</html>

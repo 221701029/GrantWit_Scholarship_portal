@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrantWit - International Scholarships</title>
+    <link rel="stylesheet" href="stylesinter.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="GrantWit Logo">
+            </a>
+        </div>
+    </header>
+    <div class="container">
+        <div class="overlay">
+            <h1>INTERNATIONAL SCHOLARSHIP</h1>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search by Scholarship, University, Degree">
+                <button onclick="searchScholarships()">SEARCH</button>
+            </div>
+
+            <div class="scholarship-list" id="scholarshipList">
+                <div class="scholarship-card" data-name="Gates Cambridge Scholarship (UK)">
+                    <h3>Gates Cambridge Scholarship (UK)</h3>
+                    <p>Covers tuition, travel, and living expenses for international students in the UK.</p>
+                    <button class="view-details" data-target="gatesCambridgeDetails">VIEW DETAILS</button>
+                    <div id="gatesCambridgeDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The Gates Cambridge Scholarship is a prestigious postgraduate award for international students to study at the University of Cambridge. It covers full tuition, living expenses, and airfare.</p>
+                        <p><strong>Eligibility:</strong> Requires admission to a postgraduate course at Cambridge, demonstrated academic excellence, leadership, and commitment to improving the lives of others.</p>
+                        <p><strong>Benefits:</strong> Full tuition coverage, living stipend, airfare, and discretionary funding.</p>
+                        <p><strong>Application:</strong> Involves application to the University of Cambridge and a separate Gates Cambridge application. Deadlines vary by course (usually December-January).</p>
+                        <p><a href="https://www.gatescambridge.org/" target="_blank">Visit Gates Cambridge Scholarship Website</a></p>
+                    </div>
+                </div>
+
+                <div class="scholarship-card" data-name="Chevening Scholarship (UK)">
+                    <h3>Chevening Scholarship (UK)</h3>
+                    <p>Covers tuition, travel, and living expenses for international students in the UK.</p>
+                    <button class="view-details" data-target="cheveningDetails">VIEW DETAILS</button>
+                    <div id="cheveningDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> Chevening Scholarships are the UK government’s global scholarship program offering awards to outstanding scholars with leadership potential to study for a master’s degree at any UK university.</p>
+                        <p><strong>Eligibility:</strong> Must be a citizen of a Chevening-eligible country, have completed an undergraduate degree, and have at least two years of work experience.</p>
+                        <p><strong>Benefits:</strong> Tuition fees, living allowance, and return airfare.</p>
+                        <p><strong>Application:</strong> Requires an online application and interviews. Application period usually opens in August and closes in November.</p>
+                        <p><a href="https://www.chevening.org/" target="_blank">Visit Chevening Scholarship Website</a></p>
+                    </div>
+                </div>
+
+                <div class="scholarship-card" data-name="Schwarzman Scholars (China)">
+                    <h3>Schwarzman Scholars (China)</h3>
+                    <p>Fully funds a master's degree at Tsinghua University in China.</p>
+                    <button class="view-details" data-target="schwarzmanDetails">VIEW DETAILS</button>
+                    <div id="schwarzmanDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> Schwarzman Scholars is a fully funded master’s program at Tsinghua University in Beijing, designed to build a global network of future leaders who can deepen understanding between China and the rest of the world.</p>
+                        <p><strong>Eligibility:</strong> Requires a bachelor’s degree, demonstrated leadership, and English proficiency. No age restriction.</p>
+                        <p><strong>Benefits:</strong> Tuition, living stipend, travel to and from Beijing, and study tours.</p>
+                        <p><strong>Application:</strong> Involves an online application and interviews. Application deadline is usually in September.</p>
+                        <p><a href="https://www.schwarzmanscholars.org/" target="_blank">Visit Schwarzman Scholars Website</a></p>
+                    </div>
+                </div>
+
+                <div class="scholarship-card" data-name="Japan MEXT Scholarship">
+                    <h3>Japan MEXT Scholarship</h3>
+                    <p>Covers tuition, living costs, and travel for international students in Japan.</p>
+                    <button class="view-details" data-target="mextDetails">VIEW DETAILS</button>
+                    <div id="mextDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The Japanese Government (MEXT) Scholarship offers opportunities for international students to study in Japan at undergraduate and graduate levels.</p>
+                        <p><strong>Eligibility:</strong> Must be a citizen of a country with diplomatic relations with Japan, meet age restrictions, and fulfill academic requirements that vary by program. Japanese language proficiency may be required.</p>
+                        <p><strong>Benefits:</strong> Full tuition exemption, monthly living allowance, and round-trip airfare.</p>
+                        <p><strong>Application:</strong> Requires application through the Japanese embassy or consulate, and may involve written examinations and interviews. Application periods vary (usually April-June).</p>
+                        <p><a href="https://www.studyinjapan.go.jp/en/smap_sto-scholarship/" target="_blank">Visit MEXT Scholarship Website</a></p>
+                    </div>
+                </div>
+
+                <div class="scholarship-card" data-name="AAUW International Fellowship (USA)">
+                    <h3>AAUW International Fellowship (USA)</h3>
+                    <p>Supports women pursuing graduate or postgraduate study in the U.S.</p>
+                    <button class="view-details" data-target="aauwDetails">VIEW DETAILS</button>
+                    <div id="aauwDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The AAUW (American Association of University Women) International Fellowships support women pursuing full-time graduate or postdoctoral study in the United States who are not U.S. citizens or permanent residents.</p>
+                        <p><strong>Eligibility:</strong> Must have a bachelor’s degree and be a woman pursuing full-time graduate or postdoctoral study in the U.S.</p>
+                        <p><strong>Benefits:</strong> Financial support for tuition, living expenses, and dependent childcare (if applicable).</p>
+                        <p><strong>Application:</strong> Requires an online application and letters of recommendation. Application deadline is usually in November.</p>
+                        <p><a href="https://www.aauw.org/resources/programs/fellowships-grants/international-fellowships/" target="_blank">Visit AAUW International Fellowships Website</a></p>
+                    </div>
+                </div>
+
+                <div class="scholarship-card" data-name="Holland Scholarship (Netherlands)">
+                    <h3>Holland Scholarship (Netherlands)</h3>
+                    <p>Supports non-EEA students for bachelor's and master's programs in the Netherlands.</p>
+                    <button class="view-details" data-target="hollandDetails">VIEW DETAILS</button>
+                    <div id="hollandDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The Holland Scholarship is funded by the Dutch Ministry of Education, Culture and Science and Dutch research universities and universities of applied sciences. It is intended for international students from outside the European Economic Area (EEA) who want to study in the Netherlands.</p>
+                        <p><strong>Eligibility:</strong> Must be a non-EEA national, have applied for a full-time bachelor’s or master’s program at a participating Dutch university, and meet specific requirements of the chosen institution.</p>
+                        <p><strong>Benefits:</strong> A one-time financial contribution of €5,000 in the first year of studies.</p>
+                        <p><strong>Application:</strong> Requires application through the participating Dutch university. Deadlines vary by institution (usually February-May).</p>
+                        <p><a href="https://www.studyinholland.nl/finances/holland-scholarship" target="_blank">Visit Holland Scholarship Website</a></p>
+                    </div>
+                </div>
+
+                <div class="scholarship-card" data-name="TaiwanICDF Scholarship">
+                    <h3>TaiwanICDF Scholarship</h3>
+                    <p>Fully funds international students for undergraduate and graduate programs.</p>
+                    <button class="view-details" data-target="taiwanicdfDetails">VIEW DETAILS</button>
+                    <div id="taiwanicdfDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The TaiwanICDF (International Cooperation and Development Fund) Scholarship Program provides opportunities for students from developing countries to pursue higher education in Taiwan.</p>
+                        <p><strong>Eligibility:</strong> Must be a citizen of an eligible developing country, have a bachelor’s degree for master’s programs, and meet specific academic requirements of the chosen university.</p>
+                        <p><strong>Benefits:</strong> Full tuition coverage, living allowance, airfare, and housing.</p>
+                        <p><strong>Application:</strong> Requires application through the Taiwan embassy or representative office. Deadlines vary by program (usually January-March).</p>
+                        <p><a href="https://www.icdf.org.tw/wSite/np?ctNode=31561&mp=2" target="_blank">Visit TaiwanICDF Scholarship Website</a></p>
+                    </div>
+                </div>
+
+                <div class="scholarship-card" data-name="Korean Government Scholarship">
+                    <h3>Korean Government Scholarship</h3>
+                    <p>Fully funds undergraduate and graduate studies.</p>
+                    <button class="view-details" data-target="kgsDetails">VIEW DETAILS</button>
+                    <div id="kgsDetails" class="details" style="display: none;">
+                        <p><strong>Overview:</strong> The Korean Government Scholarship Program (KGSP) offers opportunities for international students to pursue degrees in Korea with full funding.</p>
+                        <p><strong>Eligibility:</strong> Must be a national from a country invited by the Korean government, meet age restrictions, and fulfill academic requirements. Korean language proficiency may be required.</p>
+                        <p><strong>Benefits:</strong> Full tuition fee exemption, monthly living allowance, round-trip airfare, and Korean language training.</p>
+                        <p><strong>Application:</strong> Requires application through the Korean embassy or a designated university, with interviews and document review. Deadlines vary (usually September-October).</p>
+                        <p><a href="https://www.studyinkorea.go.kr/en/scholarships.do" target="_blank">Visit Korean Government Scholarship Website</a></p>
+                    </div>
+                </div>
+
+            </div> <!-- Closing scholarship-list div -->
+        </div> <!-- Closing overlay div -->
+    </div> <!-- Closing container div -->
+
+    <script src="scriptall.js"></script>
+</body>
+</html>
